@@ -72,7 +72,7 @@ class _FormatHackLoader(importlib.machinery.SourceFileLoader):
         )
         if spec is None:
             return None
-        
+
         # Modify the loader in the spec to this loader
         spec.loader = cls(name, spec.origin)
         return spec
